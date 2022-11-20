@@ -6,21 +6,21 @@ import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
 const celoChain = {
-  id: 44787,
+  id: 31415,
   name: "Filecoin Wallaby",
   network: "wallaby",
   nativeCurrency: {
     decimals: 18,
     name: "FVM",
-    symbol: "TFIL",
+    symbol: "tFIL",
   },
   rpcUrls: {
     default: "https://wallaby.node.glif.io/rpc/v0",
   },
   blockExplorers: {
     default: {
-      name: "Beryx Explorer",
-      url: "https://beryx.zondax.ch/",
+      name: "explorer.glif.io",
+      url: "https://explorer.glif.io/?network=wallaby",
     },
   },
   testnet: true,
