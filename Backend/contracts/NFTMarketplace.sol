@@ -104,11 +104,11 @@ contract NFTMarketplace {
         isListed(nftAddress, tokenId)
     {
         Listing memory listing = listings[nftAddress][tokenId];
-        require(msg.value == listing.price, "MRKT: Incorrect ETH supplied");
+        require(msg.value >= listing.price, "MRKT: Incorrect ETH supplied");
 
 		delete listings[nftAddress][tokenId];
 
-        IERC721(nftAddress).safeTransferFrom(
+        IERC721(nftAddress).transferFrom(
             listing.seller,
             msg.sender,
             tokenId
