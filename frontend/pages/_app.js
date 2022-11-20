@@ -5,7 +5,7 @@ import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
-const celoChain = {
+const fevmChain = {
   id: 31415,
   name: "Filecoin Wallaby",
   network: "wallaby",
@@ -27,11 +27,11 @@ const celoChain = {
 };
 
 const { chains, provider } = configureChains(
-  [celoChain],
+  [fevmChain],
   [
     jsonRpcProvider({
       rpc: (chain) => {
-        if (chain.id !== celoChain.id) return null;
+        if (chain.id !== fevmChain.id) return null;
         return { http: chain.rpcUrls.default };
       },
     }),

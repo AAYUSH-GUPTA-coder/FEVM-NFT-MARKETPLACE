@@ -69,7 +69,7 @@ export default function Listing(props) {
                 {name} - #{props.tokenId}
               </b>
             </span>
-            <span>Price: {formatEther(props.price)} CELO</span>
+            <span>Price: {formatEther(props.price)} TFIL</span>
             <span>
               Seller: {isOwner ? "You" : props.seller.substring(0, 6) + "..."}
             </span>
