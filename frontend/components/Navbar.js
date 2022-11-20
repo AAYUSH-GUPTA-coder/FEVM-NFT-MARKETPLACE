@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <Link href="/">Home</Link>
-      <Link href="/create">Create Listing</Link>
+      {/* <Link href="/create">Create Listing</Link> */}
 
       <ConnectButton />
     </div>
